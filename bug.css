@@ -1,0 +1,19 @@
+The following CSS code snippet demonstrates an issue where the expected behavior of a hover effect doesn't occur.  The element with the class `my-element` should change color on hover, but it doesn't.
+
+```css
+.my-element {
+  background-color: lightblue;
+}
+
+.my-element:hover {
+  background-color: lightcoral;
+}
+
+/* Incorrectly placed styles */
+.another-element {
+  background-color: yellow;
+}
+.my-element.another-element {
+  background-color: lightgreen; /* This accidentally overrides the hover effect */
+}
+```
